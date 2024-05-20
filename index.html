@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es"> <!--Para definir el idioma español-->
+<head>
+    <meta charset="UTF-8"><!--Va a permitir usar el idioma y los caracteres del español-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rick & Morty - Página de Inicio</title> <!--Nombre que aparece en la pestaña-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header> <!--Encabezado de la página: Se repite en cada una de las pestañas-->
+        <!--Al botón le adicioné "class="boton" para poder cambiar el estilo cuando el cursor esta arriba--> 
+        <input type="checkbox" id="boton-menu"> <!--Para colocar la imagen que reemplace al menú cuando la pantalla es más pequeña-->
+        <label for="boton-menu"><img src="PNG/Menucerrado.png" class="menusinmargen"><a href="index.html"> <!--Antes habia un título con el link del index, decidi cambiarlo por una imagen png-->
+            <img src="PNG/Logo de rick y morty.png" width="400px" height="auto" alt="logo de Rick y Morty" class="logosinmargen" >
+            </a></label> <!--Puse la imagen del logo tambien el en label para que ambos esten en el header-->
+            <nav class="menunav"><ul class="menuul">
+                <li><a href="introduccion.html"target="_self"><button class="boton">Introduccion</button></a></li>
+                <li><a href="ubicacion.html"target="_self"><button class="boton">Ubicacion</button></a></li>
+                <li><a href="personajes.html"target="_self"><button class="boton">Personajes</button></a></li>
+                <li><a href="actividades.html"target="_self"><button class="boton">Actividades</button></a></li>
+                <li><a href="historia.html"target="_self"><button class="boton">Historia</button></a></li>
+                <li><a href="mapa-interactivo.html" target="_self"><button class="boton">Mapa Interactivo</button></a></li>
+                <li><a href="creditos.html"target="_self"><button class="boton">Creditos</button></a></li>
+                <!--En los botones quité las tildes para evitar interferencias con el código, según lo explicado en la clase-->
+            </ul></nav>
+        <a href="index.html"> <!--Antes habia un título con el link del index, decidi cambiarlo por una imagen png-->
+        <img src="PNG/Logo de rick y morty.png" width="400px" height="auto" alt="logo de Rick y Morty" class="logosinmargenocultar" >
+        </a>
+    </header>
+
+
+    <div class="siguientealheader">
+        <section class="seccionsiguienteheader"> <!--Acá va una pequeña introducción, redactada en una seccion-->
+            <p></p> <!--Para generar un espacio entre los botones y la imagen-->
+            <img src="Imagenes/Rick y morty (index).jpg" width="600px" height="400px" alt="Rick y morty"/><!--La imagen salió de: https://revistadiners.com.co/cultura/cine/59110_conozca-a-justin-roiland-y-dan-harmon-los-creadores-de-rick-y-morty/-->
+            <p>"Rick y Morty" es una serie animada que desafía los límites de la ciencia ficción y la comedia, llevando a los espectadores a través de un viaje intergaláctico lleno de aventuras, humor negro y reflexiones sobre la existencia misma. Creada por Justin Roiland y Dan Harmon, la serie sigue las desventuras de Rick Sánchez, un excéntrico y alcohólico científico, y su nieto Morty Smith, un adolescente tímido y vulnerable. Juntos, viajan a través de dimensiones alternativas, exploran planetas extraños y se enfrentan a todo tipo de criaturas y dilemas existenciales mientras navegan por su peculiar relación abuelo-nieto. A través de su humor irreverente y su ingenio desbordante, "Rick y Morty" ofrece una mirada única al universo y a la condición humana, desafiando las convenciones narrativas y explorando temas profundos mientras mantiene a los espectadores al borde de sus asientos con cada episodio.</p>
+            <p>En esta página podrán encontrar información sobre los personajes y algunas de sus aventuras. </p>
+            <p>Para poder ver la serie:</p>
+            <a href="https://www.hbomax.com/co/es/series/urn:hbo:series:GXkRjxwjR68PDwwEAABKJ" target="_blank" class="hipervinculo-destacado">HBO Max: Rick & Morty</a><!--Se incluye el vinculo que lleva a la página de HBO max para ver la serie-->
+            <!--Puso el vínculo en la clase "hipervinculo-destacado" para poder darle un estilo distinto al resto del texto. No lo puse en un botón para evitar ser muy repetitivo-->
+    
+        </section>
+    </div>
+    <div class="gif-container"> <!--El gif es de Jerry cayendo, lo puse en la esquina para que al bajar la barra pareciera que va en caída-->
+        <img id="gif" src="Gif/JerrySaltando.gif" alt="Jerry Saltando" class="gif-activo"> <!--Ahora con JavaScript se puede hacer que Jerry pase de saltar a caerse al hacer scroll-->
+    </div>
+    <footer>
+        <p>&copy; 2024 Sneider Velásquez.</p>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+</html>

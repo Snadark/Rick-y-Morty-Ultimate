@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es"> <!--Para definir el idioma español-->
+<head>
+    <meta charset="UTF-8"><!--Va a permitir usar el idioma y los caracteres del español-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rick & Morty - Página de Inicio</title> <!--Nombre que aparece en la pestaña-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="headerMapa"> <!--Encabezado de la página: Se repite en cada una de las pestañas-->
+        <!--Al botón le adicioné "class="boton" para poder cambiar el estilo cuando el cursor esta arriba--> 
+        <input type="checkbox" id="boton-menu"> <!--Para colocar la imagen que reemplace al menú cuando la pantalla es más pequeña-->
+        <label for="boton-menu"><img src="PNG/Menucerrado.png" class="menusinmargen"><a href="index.html"> <!--Antes habia un título con el link del index, decidi cambiarlo por una imagen png-->
+            <img src="PNG/Logo de rick y morty.png" width="400px" height="auto" alt="logo de Rick y Morty" class="logosinmargen" >
+            </a></label> <!--Puse la imagen del logo tambien el en label para que ambos esten en el header-->
+            <nav class="menunav"><ul class="menuul">
+                <li><a href="introduccion.html"target="_self"><button class="boton">Introduccion</button></a></li>
+                <li><a href="ubicacion.html"target="_self"><button class="boton">Ubicacion</button></a></li>
+                <li><a href="personajes.html"target="_self"><button class="boton">Personajes</button></a></li>
+                <li><a href="actividades.html"target="_self"><button class="boton">Actividades</button></a></li>
+                <li><a href="historia.html"target="_self"><button class="boton">Historia</button></a></li>
+                <li><a href="mapa-interactivo.html" target="_self"><button class="boton">Mapa Interactivo</button></a></li>
+                <li><a href="creditos.html"target="_self"><button class="boton">Creditos</button></a></li>
+                <!--En los botones quité las tildes para evitar interferencias con el código, según lo explicado en la clase-->
+            </ul></nav>
+        <a href="index.html"> <!--Antes habia un título con el link del index, decidi cambiarlo por una imagen png-->
+        <img src="PNG/Logo de rick y morty.png" width="400px" height="auto" alt="logo de Rick y Morty" class="logosinmargenocultar" >
+        </a>
+    </header>
+<div>
+    <h1 class="titulo-distinto tituloMapa">Mapa Interactivo: Personajes</h1>
+    <div class="Mapa-personajes">
+        <img class="Personajes" src="Imagenes/Personajes.jpg" alt="Personajes de Rick y Morty">
+        <a href="#info" target="_self"><img class="BethSmith imagensinmargen" onclick="Beth()" src="PNG/PlayNormal.png" alt="Beth Smith"></a>
+        <a href="#info" target="_self"><img class="SummerSmith imagensinmargen" onclick="Summer()" src="PNG/PlayNormal.png" alt="Summer Smith"></a>
+        <a href="#info" target="_self"><img class="MortySmith imagensinmargen" onclick="Morty()" src="PNG/PlayNormal.png" alt="Morty Smith"></a>
+        <a href="#info" target="_self"><img class="RickSanchez imagensinmargen" onclick="Rick()" src="PNG/PlayNormal.png" alt="Rick Sanchez"></a>
+        <a href="#info" target="_self"><img class="JerrySmith imagensinmargen" onclick="Jerry()" src="PNG/PlayNormal.png" alt="Jerry Smith"></a>    
+    </div>
+    <br>
+    <div class="info-personajes">
+        <p id="info">
+        <strong>Personajes</strong>
+        </p>
+    </div>
+</div>
+    <footer>
+        <p>&copy; 2024 Sneider Velásquez.</p>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+</html>

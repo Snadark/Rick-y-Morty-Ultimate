@@ -1,0 +1,623 @@
+/*El estilo por defecto corresponde a las pantallas de 1200px o más*/
+
+/*Primero: El estilo de los títulos. Cada título va a tener estilos distinto. Se va a conservar la jerarquía (h1 será más grande que h2 y esté más grande que h3*/
+/*El único titulo "h1" es el mismo del index*/
+/**Todo este estilo va a quedar para computadores portátiles, cuyas pantallas pueden ser de 1200px o más**/
+h1{font-size: 45px}
+
+/*El título "h2" es el que más se repite en todos los archivos, decidí darle un estilo distinto*/
+h2{color:#2f4f4f;
+    font-size: 30px}
+
+/*El estilo para h3, que aparece pocas veces, también va a tener variaciones*/
+h3{color: darkkhaki;
+    font-size: 20px}
+
+ht{color: #2f4f4f;
+  font-size: 20px;}
+
+/*Los párrafos van a mantener el mismo estilo, esté hará que sea más armonioso con el resto de la página*/
+/*El tamaño  "large" fue el que más me gustó*/
+p{color: black;
+  font-size:large;
+  }
+
+/* Se usó el selector universal para elegir un tipo de letra, elegí cambria porque siempre me ha gustado como se ve */
+/*Para el color usé una combinación de negro*/
+* {font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+color: rgb(17, 13, 13);}
+
+/* Quiero establecer una iamgen como fondo de la página, por lo que la pondré en el cuerpo */
+/*La imagen ya la habia guardado y lo único que hace falta es llamarla con la etiqueta adecuada*/
+/*La imagen afecta el contraste del texto, por lo que voy a hacerla un poco más opaca*/
+/*También adicioné una margen pequeña para que la página no se viera muy pegada al borde*/
+
+/*Acá va el código relacionado con el menú*/
+#boton-menu {
+  display: none;
+} 
+
+header {
+  width: 100%;
+}
+
+header label {
+  display: none;
+  height: 40px;
+  padding: 0px 0px 0px 0px;
+} 
+
+.menunav {
+  display: flex;
+  justify-content: center; /*Para centrar el menú horizontalmente */
+}
+
+.menunav ul li { /*Como se muestr el menú cuando está en pantalla completa*/
+    display: inline-block; /*Para que se muestre en linea*/
+    text-align: center; /*Alineación*/
+    list-style-type: none;/*Quitar los corchetes*/
+    
+}
+
+/*Como cambie el cursor y ya no puedo usar el pointer, entonces voy a hacer que la imagen de menu cambie al posicionar el cursor encima, para que se evidencie que tiene un vinculo*/
+.menusinmargen:hover {
+    content: url(PNG/menucursor.png);
+}
+/*Al darke click, también va a cambiar de imagen*/
+.menusinmargen:active {
+    content: url(PNG/Menuabierto.png);
+}
+/*Con el logo pasa lo mismo, antes cuando era un texto h1 esta subrayado y se sobreentendia que tiene un vinculo, al cambiarlo por una imagen PNG no se evidencia, por lo que hice que cambiara la imagen al ponerle el cursor encima*/
+.logosinmargen:hover {
+    content: url(PNG/logo2.png);
+}
+.logosinmargenocultar:hover {
+    content: url(PNG/logo2.png);
+}
+
+.imagensinmargen{
+  border: 0;
+}
+
+body {
+    margin: 50px;
+    background-image: url(Imagenes/Fondo9.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /*esta orden hace que la imagen de fondo no se rompa en las distintas páginas*/
+    background-attachment: fixed;/*Esta orden es para que el fondo se quede estático*/
+    background-color: rgba(255, 255, 255, 0.5); /*Este es la orden para hacer la imagen de fondo menos opaca, especificamente el ultimo valor numérico*/
+  }
+
+/*Aporte: cambiar el cursor por imagen png y por otra al hacer click*/
+/*Después de hacer el cambio del cursor, noté que era un poco aburrido e incómodo que siempre fuese un circulo, por esto mismo deidí que al hacer click cambiara la imagen para que se viera más interactivo.*/
+/*Para que el botón aplique para todas las opciones (todas las páginas y también para cuando está sobre un vínculo: porque al acercarse a los vinculos cambia al puntero corriente*/
+* {cursor: url(PNG/cursor.png) 16 16, auto /* el 16 16 es para que el centro de la imagen coincida con la parte superior del cursor y el "auto" es necesario para que el cursor cambie, sin esa opción el cursor no cambia*/
+  }
+/*"*:active" es para cuando se le dé click*/
+*:active {cursor: url(PNG/cursorclick.png) 16 16, auto;}
+
+/*A continuación están las ordenes para el estilo de los botones*/
+button {
+    background-color: rgb(152, 238, 231);
+    color: rgb(24, 19, 3);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform:capitalize;
+    }
+
+/*A continuación se presenta el comando para que el botón cambie de color, y el texto también, cuando el cursor esta encima*/
+.boton:hover {
+        background-color: rgb(16, 70, 65);
+        color: rgb(180, 144, 25);
+      }
+/*Quiero que el botón tome otro color justo cuando le den click*/
+.boton:active {
+    background-color: hsl(128, 51%, 67%);
+  }
+
+/*Ahora voy a definir el estilo de las imagenes, quiero que todas estén centradas y tengan bordes*/
+img {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid black;
+  }
+/*Quiero que la imagen del logo no tenga bordes como el resto de imagenes*/
+img.logosinmargen {
+    border: none;
+/*Lo mismo que arriba, como tuve que duplicar la imagen para que aparezca en el label al acortar la pantalla tuve que crear dos class y debo duplicar los codigos*/
+}
+img.logosinmargenocultar{
+    border:0
+}
+/*Quitarle las margenes a la imagen del menu*/
+img.menusinmargen {
+    border: none;
+}
+/*Quitarle las margenes a la imagen de las flechas en introduccion*/
+img.menusinmargen2 { 
+  border: none;
+}
+
+.contenedor {
+    display: flex; /* Usar flexbox para alinear los elementos */
+    justify-content: space-between; /* Espaciado uniforme entre los elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+  }
+  
+.imagen-derecha {
+    width: 200px; /* Ancho deseado para la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y el párrafo */
+  }
+
+.parrafo-izquierdo {
+    flex-grow: 1; /* El párrafo ocupará el espacio restante */
+  }
+
+/*Quiero que el vínculo que lleva a HBO max (en el index) sea más grande y de otro color*/
+.hipervinculo-destacado {
+    font-size: 30px;
+    color: rgb(93, 207, 58);
+    text-decoration: underline; /* Subrayado */
+    font-weight: bold; /* Negrita */
+  }
+
+/*En la tabla de la pestaña "personajes" quería que todas las imagenes tuvieran el mismo tamaño y mantuvieran la resolución*/
+.imagen {
+    width:200px; /* Ancho para todas las imágenes */
+    height: 200px; /* Altura para todas las imágenes */
+    object-fit: cover; /* Ajustar el contenido de la imagen para que se ajuste al tamaño*/
+  }
+
+/*Hay dos páginas con tablas: La de los personajes y la de los créditos. Quiero que todas tengan centrado el texto*/
+table{text-align: left;
+      width: 100%;}
+
+/*Quiero que las tablas de los créditos tengan margenes y también que esten alineadas entre ellas. No quise quitar las viñetas ya que las uso para separar la información*/
+.contenedor-tablas {
+    margin: 20px; /* Márgenes alrededor del contenedor */
+  }
+  
+.contenedor-tablas table {
+    width: 90%; /* Para que las tablas ocupen todo el ancho del contenedor */
+    margin-bottom: 20px; /* Espacio entre tablas */
+    border-collapse: collapse; /* Combina los bordes de las celdas */
+  }
+  
+.contenedor-tablas td, .contenedor-tablas th {
+    border: 1px solid black; /* Añade bordes a las celdas */
+    padding: 10px; /* Añade relleno a las celdas */
+  }
+
+  /*Quiero que los títulos de cada página sea disntinto al título principal y al resto*/
+.titulo-distinto {
+    color: rgb(22, 66, 37); /* Color del texto */
+    font-size: 35px; /* Tamaño de fuente */
+    font-weight:1000; /* Peso de la fuente */
+    text-align:left; /* Alineación del texto */
+    text-transform:capitalize; 
+    }
+    /*Acá voy a agregar un Gif*/ 
+.gif-container {
+    position: fixed; /* Fija la posición del contenedor*/
+    bottom: 20px; /* Ajusta la posición vertical*/
+    right: 20px; /* Ajusta la posición horizontal*/
+    }
+  /* Estilos para el GIF */
+.gif-container img {
+    margin: 0; /* Elimina las márgenes */
+    border:none;
+    width: 150px; /* Ajusta el tamaño del GIF */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+  
+.SeccionEscondida {
+    display: none; /* Para ocultar todas las secciones de "Actividades" */
+}
+
+.section-wrapper {
+  margin-bottom: 2px; /* Espacio entre las secciones */
+}
+
+.section-button-wrapper {
+  display: block; /* Mostrar los botones como bloques */
+}
+
+.toggle-btn {
+  display: block; /* Mostrar los botones como bloques */
+  margin-bottom: 2px; /* Espacio entre los botones */
+  width: 100%;
+  height: 40px;
+  margin: 0px 0; /* Reduce el margen superior e inferior entre los botones*/
+  padding: -10px -5px; /* Reduce el relleno a 10px en los lados y 20px en la parte superior e inferior */
+  text-align: left;
+  align-items: center;
+  position: relative;
+  display: flex; /* Activar Flexbox */
+  justify-content: space-between; /* Distribuir elementos con espacio entre ellos */
+}
+
+.texto-toggle-btn {
+  flex-grow: 1; /* Permite que el texto ocupe el espacio disponible */
+}
+/*Aún falta colocar los iconos*/
+.icono-toggle-btn {
+  position: absolute; /* Posicionamiento absoluto dentro del botón */
+  top: 50%; /* Posiciona verticalmente en el centro */
+  transform: translateY(-50%); /* Compensa el posicionamiento superior */
+  right: 10px; /* Margen derecho para el icono */
+}
+
+.contenido{
+    width: 90%;
+    margin: auto; /* centrado en la pantalla */
+    margin-top: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px black;
+    background-color: rgba(52, 202, 140, 0.7);  /* r, g, b, alfa (transparencia)*/
+}
+.Titulo-historia{
+  text-align: center;
+  color: black;
+}
+.contenido2{
+  width: 100%;
+  margin: auto;
+  border: 100px rgba(3, 61, 37, 0.7);
+  box-shadow: 0 0 10px black;
+  background-color: rgba(3, 61, 37, 0.7);
+}
+/**Esto es para centrar el video y que se adapte al tamaño de la pantalla**/
+.iframe-video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Establece la altura del contenedor */    
+}
+/**Modifiqué la altura del header para que no se suban los botones del mapa interactivo al poner el cursor sobre la imagen que lleva al index**/
+header{
+  height: 200px;
+}
+
+.Mapa-personajes{
+  position: relative;
+}
+
+.tituloMapa{
+  padding: 15px;
+}
+.BethSmith{
+  position: absolute;
+  z-index: 2;
+  top: 70%;
+  right: 76%
+}
+
+.SummerSmith{
+  position: absolute;
+  z-index: 2;
+  top: 55%;
+  right: 61%
+}
+
+.MortySmith{
+  position: absolute;
+  z-index: 2;
+  top: 55%;
+  right: 48%
+}
+
+.RickSanchez{
+  position: absolute;
+  z-index: 2;
+  top: 55%;
+  right: 34%
+}
+
+.JerrySmith{
+  position: absolute;
+  z-index: 2;
+  top: 70%;
+  right: 20%
+}
+
+.info-personajes{
+  border: 2px solid rgb(5, 122, 83);
+  column-count: 2;
+  column-gap: 2px;
+  column-width: 150px;
+  width: 90%;
+  margin: auto
+}
+
+.ImgM{
+  width: 50%;
+  height: auto;
+}
+
+
+
+/**Acontinuación van los estilos para tableta o portátil sencillo**/
+@media screen and (min-width:800px) and (max-width:1200px){
+  header {text-align:center;} /*Para que la sección del encabezado, donde están los botones también se centren.*/
+  p {font-size: large; /**Decidí mantener el mismo tamaño de fuente**/
+    line-height: 1.5; /**Aumenté un poco el interlineado para facilitar a lectura**/
+    }
+  nav{font-size: large; /**Aumenté el tamaño de los vinculos internos para evitar confusiones al elegir alguno y mejorar la visualización**/
+    }
+  /**Para facilitar su elección y que el usuario pueda ser redirigido al link al que conecta, separé un poco los títulos con hipervínculo. Para evitar duplicar espacios y evitar hacer el código muy grande, elegí ponerle espacios extra a los título en 2,4,6,8 y 10**/
+  nav ul li:nth-child(2) { /**Está opción permite poner un espaciado entre los elementos que componen las listas en "<nav>", que aparecen en "introducción" y "actividades"**/
+      margin-top: 20px; /* Espacio extra arriba */
+      margin-bottom: 20px; /* Espacio extra abajo */
+    }
+  nav ul li:nth-child(4) {
+    margin-top: 20px; /* Espacio extra arriba */
+    margin-bottom: 20px; /* Espacio extra abajo */
+  }
+  nav ul li:nth-child(6) {
+    margin-top: 20px; /* Espacio extra arriba */
+    margin-bottom: 20px; /* Espacio extra abajo */
+  } 
+  nav ul li:nth-child(8) {
+    margin-top: 20px; /* Espacio extra arriba */
+    margin-bottom: 20px; /* Espacio extra abajo */
+  }
+  nav ul li:nth-child(10) {
+    margin-top: 20px; /* Espacio extra arriba */
+    margin-bottom: 20px; /* Espacio extra abajo */
+  } 
+  table {margin:0; /**Para que las tablas no ocupen tanto espacio y se puedan ver mejor los contenidos**/
+  }      
+  th, td {border: 2px solid #1c4133
+  }
+  .contenedor-tablas {
+    margin: 0px; /**Márgenes alrededor del contenedor, para que la tabla se corra un poco a los bordes y se vean mejor los contenidos**/
+  }
+  td, th {
+    padding: 0px;
+  }
+  /*Quiero que se resalten los títulos de todas las tablas, incluyendo la de personajes*/
+  th {background-color: #32946e;
+      text-align: center;
+  }
+  /*Aporte: Para que las tablas no muestren tanta información, voy a suprimir una columna*/
+  /*Quiero que la tabla de personajes, que tiene  5 columnas, no muestre la tercera*/
+  th:nth-child(3),
+  td:nth-child(3) {
+    display: none;
+  }
+
+/*A continuación el código del menú*/
+  #boton-menu:checked ~ .menunav {
+      margin:1px;
+    }      
+  
+  header {
+      background-color: #32946e;
+      position: fixed; /*para que el encabezado se fije en la parte superior*/
+      top: 0; /*Para que el encabezado se fije en la parte superior de la pantalla*/
+      width: 100%; /*Para que ocupe el total del ancho del encabezado*/
+      height: 42px;
+      left: 0; /*Para que el encabezado empiece desde el extremo izquierdo*/
+      z-index: 999; /*Para asegurar que el encabezado esté por encima de cualquier otro elemento*/
+      
+    } 
+  header img  { /*Para definir algunas de las características de las imagenes que están en el header (logo y menu)*/
+      width: 120px;
+      height: auto;
+      margin-right: 50px; /*Para separar la imagen menú del logo*/
+  } 
+    
+  .siguientealheader { /*Para crear un espaciado entre el encabezado y el resto del contenido de la página*/
+      margin-top: 100px;
+  }
+    
+  header label {
+      margin-left:20px;
+      margin-right: 10px; 
+      width: 20px;    
+      display:flex;
+    }
+  
+  .logosinmargenocultar { /*Para que no aparezca la imagen en el encabezado, ya que no se logra acomodar bien en el encabezado y hace que se ocupe mucho espacio*/
+    display: none;
+  }
+
+  .menunav { /*Es el codigo para el menú cuando esta en una pantalla más pequeña*/
+      position: fixed; /*Para que al abrirlo, el menú se mantenga en pantalla*/
+      width: 100px;
+      margin-left: -30%;
+      transition: all 0.5s; /*Para que aparezca más rápido*/
+  } 
+  .menunav ul { /*Para que el menú se muestre en forma de columna*/
+      flex-direction: column;
+  } 
+  .menunav ul li {
+      width: 100px;
+      text-align: left;
+  }
+  img {
+    max-width: 90%; /*Para que las imagenes se vean completas en la página, a medida que cambie la proporción de la pestaña, cambia el tamaño de la imagen*/
+    height: auto;
+  }
+
+  .logosinmargen {
+      max-width: none; /*Para que no les afecte el max-width de img*/
+  }
+  .menusinmargen {
+      max-width: none; /*Para que no les afecte el max-width de img*/
+  }
+
+  .imagensinmargen{
+    width: 50px;
+  }
+
+  .ImgM{
+    display: none;/*Para que no se muestre la imagen en el menú interactivo*/
+  }
+
+  .info-personajes{
+    column-count: 1; /*Para mostrar solo una columna*/
+  }
+}
+
+/*A continuación se encuentra el código para pantallas de 800px o menos*/
+@media screen and (max-width:800px){
+    h1{ font-size: 30px}
+    h2{ font-size: 25px;}
+    h3 {font-size: 20px;}
+    body {
+      margin: 3%; /*Una margen relativa para evitar que el texto se pierda en el borde de la pestaña*/
+      font-size: 20px;
+      background-image: url(Imagenes/Fondo10.jpg); /*Cambie el fondo por uno que esta en formato vertical*/
+      background-color:rgb(38, 133, 101);
+    }
+    p {
+      font-size: large;
+      line-height: 2; /*Un interlineado grande para facilitar la lectura*/
+    }
+    nav {
+      font-size: large;
+    }
+    nav ul li:nth-child(2) { /**Está opción permite poner un espaciado entre los elementos que componen las listas en "<nav>", que aparecen en "introducción" y "actividades"**/
+      margin-top: 20px; /* Espacio extra arriba */
+      margin-bottom: 20px; /* Espacio extra abajo */
+    }
+    nav ul li:nth-child(4) {
+      margin-top: 20px; /* Espacio extra arriba */
+      margin-bottom: 20px; /* Espacio extra abajo */
+    }
+    nav ul li:nth-child(6) {
+      margin-top: 20px; /* Espacio extra arriba */
+      margin-bottom: 20px; /* Espacio extra abajo */
+    } 
+    nav ul li:nth-child(8) {
+      margin-top: 20px; /* Espacio extra arriba */
+      margin-bottom: 20px; /* Espacio extra abajo */
+    }
+    nav ul li:nth-child(10) {
+      margin-top: 20px; /* Espacio extra arriba */
+      margin-bottom: 20px; /* Espacio extra abajo */
+    } 
+    .contenedor {
+      display:flex; /* Alinear*/
+      align-items:center; /* Centrar verticalmente*/
+      flex-direction: column;
+    }
+    .imagen-derecha {
+      margin-right: auto; /*Para que la imagen se centre */
+    }
+    .parrafo-izquierdo {
+      flex-grow: 0; /* El párrafo ocupará el espacio restante */
+    }
+
+    img {
+      max-width: 100%; /*Para que las imagenes siempre se puedan ver bien*/
+      height: auto;
+    }
+    .logosinmargen {
+      max-width: none; /*Para que no les afecte el max-width de img*/
+    }
+    .menusinmargen {
+      max-width: none; /*Para que no les afecte el max-width de img*/
+    }
+
+    /*A continuación el código para el menú*/
+    #boton-menu:checked ~ .menunav {
+      margin:1px;
+    }      
+    header {
+      background-color: #32946e;
+      position: fixed; /*para que el encabezado se fije en la parte superior*/
+      top: 0; /*Para que el encabezado se fije en la parte superior de la pantalla*/
+      width: 100%; /*Para que ocupe el total del ancho del encabezado*/
+      height: 42px;
+      left: 0; /*Para que el encabezado empiece desde el extremo izquierdo*/
+      z-index: 999; /*Para asegurar que el encabezado esté por encima de cualquier otro elemento*/
+      
+    } 
+  
+    header img  { /*Para definir algunas de las características de las imagenes que están en el header (logo y menu)*/
+        width: 120px;
+        height: auto;
+        margin-right: 5em; /*Para separar el menu del logo:index y evitar confuciones*/
+    } 
+    
+    .siguientealheader { /*Para crear un espaciado entre el encabezado y el resto del contenido de la página*/
+        margin-top: 100px;
+    }
+      
+    header label {
+        margin-left:20px;
+        margin-right: 10px; 
+        width: 20px;    
+        display:flex;
+    }
+    
+    .logosinmargenocultar { /*Para que no aparezca la imagen en el encabezado, ya que no se logra acomodar bien en el encabezado y hace que se ocupe mucho espacio*/
+      display: none;
+    }
+
+    .menunav { /*Es el codigo para el menú cuando esta en una pantalla más pequeña*/
+        position: fixed; /*Para que al abrirlo, el menú se mantenga en pantalla*/
+        width: 100px;
+        margin-left: -50%;
+        transition: all 0.5s; /*Para que aparezca más rápido*/
+    } 
+    .menunav ul { /*Para que el menú se muestre en forma de columna*/
+        flex-direction: column;
+    } 
+    .menunav ul li {
+      width: 100px;
+      text-align: left;
+    }
+    th:nth-child(3),
+    td:nth-child(3) { /*Para quitar la columna tres de las tablas: Solo le aplicaria a la columna sobre temporadas desde las que aparecen los personajes*/
+      display: none;
+    }
+    th:nth-child(5),
+    td:nth-child(5) { /*En pantallas más pequeñas se va a quitar también la quinta columna, sobre versiones relevantes de cada personaje*/
+      display: none;
+    }
+    table th {
+      display: none; /*Para quitar los encabezados de las tablas*/
+    }
+  /* Cambia la visualización de la tabla a bloque para pantallas más pequeñas */
+    table, table td {
+      display: block;
+      width: 100%;
+    }
+  /*Para ahorrar espacio en los créditos, se va a quitar la primer columna de las tablas*/
+    .contenedor-tablas th:nth-child(1),
+    .contenedor-tablas td:nth-child(1){
+      display:none
+    }
+    
+    .contenedor-tablas {
+      margin: 10px; /* Márgenes alrededor del contenedor */
+    }
+    
+    .contenedor-tablas table {
+      width: 50%; /* Para que las tablas no ocupen todo el ancho del contenedor */
+      margin-bottom: 0px; /*Quitar espacio entre tablas */
+    }
+
+    .contenedor-tablas td, .contenedor-tablas th {
+      display: block; /*Para que no se muestren las tablas*/
+      width: 50%;
+      border: 0px solid black; /*Quita los bordes de las celdas */
+      padding: 0px; /*Quita el relleno a las celdas */
+    }
+    .imagensinmargen{
+      width: 30px;
+    } 
+    .ImgM{
+      display: none;/*Para que no se muestre la imagen en el menú interactivo*/
+    }
+  
+    .info-personajes{
+      column-count: 1; /*Para mostrar solo una columna*/
+    } 
+}

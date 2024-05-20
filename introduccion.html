@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción - Rick & Morty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header> <!--Encabezado de la página-->
+        <input type="checkbox" id="boton-menu">
+        <label for="boton-menu"><img src="PNG/Menucerrado.png" class="menusinmargen"><a href="index.html"> <!--Antes habia un título con el link del index, decidi cambiarlo por una imagen png-->
+            <img src="PNG/Logo de rick y morty.png" width="400px" height="auto" alt="logo de Rick y Morty" class="logosinmargen" >
+            </a></label>
+            <nav class="menunav"><ul class="menuul">
+                <li><a href="introduccion.html"target="_self"><button class="boton">Introduccion</button></a></li>
+                <li><a href="ubicacion.html"target="_self"><button class="boton">Ubicacion</button></a></li>
+                <li><a href="personajes.html"target="_self"><button class="boton">Personajes</button></a></li>
+                <li><a href="actividades.html"target="_self"><button class="boton">Actividades</button></a></li>
+                <li><a href="historia.html"target="_self"><button class="boton">Historia</button></a></li>
+                <li><a href="mapa-interactivo.html" target="_self"><button class="boton">Mapa Interactivo</button></a></li>
+                <li><a href="creditos.html"target="_self"><button class="boton">Creditos</button></a></li>
+                <!--En los botones quité las tildes para evitar interferencias con el código, según lo explicado en la clase-->
+            </ul></nav>
+        <a href="index.html"> <!--Antes habia un título con el link del index, decidi cambiarlo por una imagen png-->
+            <img src="PNG/Logo de rick y morty.png" width="400px" height="auto" alt="logo de Rick y Morty" class="logosinmargenocultar" >
+            </a>    
+    </header>
+    <div class="siguientealheader">
+        <a name="inicio"></a><!--Acá incluí un "inicio" para poder regresar a las opciones sin necesidad de hacer scroll hacia arriba-->
+        <h1 class="titulo-distinto">Introducción</h1> <!--Este "título distinto" lo incluí en todas las pestañas menos en Index y la puse para que se pudiera ver en que página estaba el expectador, también para darle un estilo distinto al h1 de Rick y Morty-->
+        <nav><!--Decidí colocar otra franja con botones que naveguen entre tres secciones en la página "introducción"-->
+            <ul>
+                <li><a href="#section1" data-seccion="0">Origen de la serie</a></li> <!--el data-seccion es para poder hacer más interactivo cada sección, pero que a la vez estos botones no pierdan funcionalidad-->
+                <li><a href="#section2" data-seccion="1">Creadores</a></li>
+                <li><a href="#section3" data-seccion="2">Sinopsis</a></li>
+            </ul>
+        </nav>
+        <section id="section1" class="seccion"><!-- Esta es la primer sección de este archivo. Las secciones se agregaron para que se pueda navegar entre cada subtema sin necesidad de hacer scroll-->
+            <h2><a name="Origen de la serie">Origen de la serie </a></h2>
+            <p>El programa esta basado en uno de los satíricos cortos animados para Channel 101, bautizado como The Real Animated Adventures of Doc and Mharti por Justin Rolland, siendo este una parodia del popular filme de 1985 llamado Volver al Futuro.</p><!--La información la tomé de: https://adult-swim.fandom.com/es/wiki/Rick_y_Morty#:~:text=El%20programa%20esta%20basado%20en,1985%20llamado%20Volver%20al%20Futuro.-->
+            <p>Justin Roiland grababa vídeos caseros con sus amigos (alguno incluso de la universidad), amigos con su mismo sentido del humor. Justin afirmaba que era como si tuviesen su propio idioma y sólo sus amigos supieran hablarlo. Acabaron consolidándose como un equipo y realizando sus primeros trabajos en publicidad para locales de su ciudad natal (Central Valley, California).</p>
+            <!--Esto salió de: https://imagenidea.es/origen-rick-morty/-->
+            <p>No hay que olvidar que detrás de Rick y Morty hay dos cabezas pensantes que han definido la esencia de la serie. Esta segunda pieza es Dan Harmon, que empezaría en antros de improvisación junto a su amigo Rob Schrab. Fuera del escenario, realizaban sus propios sketches. Su humor se basaba en dos grandes elementos: la cultura pop y el meta-humor. Los dos afrontaron grandes fracasos y grandes desiluciones antes de lograr probar el éxito.</p><!--Esto también salió de: https://imagenidea.es/origen-rick-morty/-->
+            <p>La gran oportunidad llego con Channel 101. Un concurso al que se podía enviar cualquier tipo de piloto para una serie de televisión. Justin lo intentó en las primeras ediciones. Después del trabajo, él y sus amigos iban a su casa y diseñaban a los personajes, los doblaban, los animaban y montaban.</p><!--Esto también salió de: https://imagenidea.es/origen-rick-morty/-->
+            <p>En 2006 Justin produjo un piloto para Channel 101 titulado The real animated adventures of Doc and Mharti. Pese a haber realizado varios proyectos de la misma envergadura, Justin desarrolló una fuerte fijación por los personajes que había creado en su nuevo corto y las voces con las que los dobló. Dan Harmon apareció con la noticia de que Adult Swim buscaba una nueva serie de animación para su canal, fue entonces cuando Roiland propuso a estos personajes. La idea gustó, pero empezaron los conflictos. Harmon no quería que Roiland doblara a ambos personajes, y Mike Lazzo (director creativo de Adult Swim) decía que el personaje de Morty no era gracioso.</p><!--Esto también salió de: https://imagenidea.es/origen-rick-morty/-->
+            <p>En la industria, se puede hablar de una cierta “batalla de egos”. Todos creían tener razón. Roiland se encontraba en una encrucijada. Morty era un personaje esencial para la serie, por lo que decidió animar una secuencia en la que Morty demostraba por qué era importante. A día de hoy conocemos esa secuencia porque aparece en el piloto de Rick y Morty. Por otro lado, Harmon también se retracta una vez se empieza a rodarse la serie. “The potential of Justine voices is one of the best points of the show” (Dan Harmon, 2017, Rick and Morty Origins).</p><!--Esto también salió de: https://imagenidea.es/origen-rick-morty/-->
+            <img src="Imagenes/Primeros bocetos de Morty.jpg" width="1000px" heigth="1000px" alt="La imagen muestra los primeros trazos y expresiones de Morty al ser creado por Roiland" title="Primeros bocetos de Morty"><!--Esto también salió de: https://imagenidea.es/origen-rick-morty/-->
+            <p>Después de todo el camino que tuvieron que recorrer sus dos creadores, Rick y Morty se ha convertido en la serie de animación más influyente de la actualidad, generando millones y millones en beneficios y asombrando con los altos niveles de audiencia.</p><!--Esto también salió de: https://imagenidea.es/origen-rick-morty/-->
+        </section> 
+
+        <section id="section2" class="seccion"><!--Esta es la segunda sección-->
+            <h2>Creadores</h2>
+            <!--Quiero que la imagen de los creadores se ubiquen a la derecha y el texto a la izquierda, por lo que voy a usar la función contenedor-->
+            <!--Para ello voy a poner la imagen y biografia de cada creador en un <div></div> cada uno-->
+            <h3>Justin Roiland</h3>
+            <div class="contenedor"> 
+                <img src="imagenes/Justin Roiland.jpg" width="250px" heigth="250px" alt="Justin Roiland" class="imagen-derecha"/>
+            <p class="parrafo-izquierda"> Justin Roiland es un actor, productor, director y animador estadounidense conocido por crear la caricatura para adultos, Rick & Morty. Después de graduarse comenzó a colaborar con el sitio de internet Channel 101 que produce programas de comedia transmitidos por la web. Durante sus primeros trabajos profesionales, Roiland y su equipo tuvieron que dirigir y producir cada elemento de sus cortometrajes, por lo que el animador ha obtenido mucha experiencia en diferentes ámbitos de producción. Entre algunos de sus shows más populares (para adultos) se encuentran Reporters (2007), una miniserie de cinco episodios; 2 Girls, 1 Cup: The Show, un programa de acción real y stop motion protagonizado por un vaso rojo de cerveza; y por otro lado, los  programas infantiles Pecezuelos (2014-2014) de Disney XD, donde Roiland fungió como director, productor y actor de doblaje; y Hora de aventura y Gravity Falls sirviendo como actor de doblaje. Su proyecto más ambicioso -y el más querido por el público en general- vio la luz en 2013: Rick & Morty. Esta es una de las series más populares de los últimos tiempos pues fusiona animación, temas de actualidad y comedia al estilo puramente estadounidense con la acidez de Roilan y su co-creador, Dan Harmon. Justin hace la voz de los dos personajes principales y en muchos especiales detrás de cámaras, el creador ha declarado que a veces necesita estar borracho o consumiendo refresco para lograr los tintes de voz adecuados, incluso suele grabar su voz con botellas de alcohol cerca de él para estar constantemente borracho. </p><!--Esta informació la obtuve de: https://www.sensacine.com.mx/actores/actor-493313/biografia/-->
+            <!--La imagen es de: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nytimes.com%2F2023%2F01%2F25%2Farts%2Ftelevision%2Frick-and-morty-justin-roiland.html&psig=AOvVaw3FsujOpkH1OvB50jD2GjLp&ust=1708313244100000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJDs-_f4s4QDFQAAAAAdAAAAABAD-->
+            <!--Coloqué la imagen y el párrafo en clases para poder darles estilo con CSS-->
+            </div>
+            <h3>Dan Harmon</h3>
+            <div class="contenedor">
+            <img src="imagenes/Dan Harmon.jpg" width="250px" height="250px" alt="Dan Harmon" class="imagen-derecha"/></p>
+            <p class="parrafo-izquierda"><!--La imagen salió de: https://www.nydailynews.com/2018/07/23/dan-harmon-community-rick-and-morty-creator-deletes-twitter-after-fake-rape-video-resurfaces-online/--><p>Dan Harmon es un guionista, productor, animador y actor estadounidense reconocido, entre muchas otras cosas, por ser el cocreador de la serie para adultos Rick & Morty. Comenzó a trabajar en la escena del stand-up comedy con una rutina que creó durante su tiempo en la universidad y, debido a que en ese entonces fue parte de muchos clubes de comedia, ganó experiencia rápidamente en la industria. Paralelamente, fue productor y escritor de varios programas web de corte humorístico. Muchos de estos se estrenaron en un canal de internet llamado Channel 101 que igualmente Harmon ayudó a fundar; algunos de los invitados recurrentes a este proyecto fueron Jack Black y Owen Wilson, el primero fue protagonista de la serie Computerman (2003-2004). Poco después, Harmon propuso un programa de comedia nuevo llamado Community (2009-2015) que fue todo un éxito y durante su tiempo al aire obtuvo varios premios en competiciones de televisión. Su siguiente gran trabajo lleva por título Harmontown (2012-), un proyecto particular que comenzó como un podcast en el que, junto a sus amigos, jugaba juegos de mesa mientras platicaba de temas de interés popular. A su salida de Community, el podcast fue llevado a la televisión con un formato similar y este se ha ido renovando con los años, a la fecha cuenta con más de 230 episodios, y, posteriormente, este fenómeno de la comedia fue llevado a la pantalla grande con un documental homónimo dirigido por Neil Berkeley. Más recientemente, trabajó junto a Justin Roiland para crear una de las series más famosas de los últimos años, la comedia ácida para adultos Rick & Morty (2013-). En dicha  serie, Harmon, ha participado como escritor, productor e incluso como actor, pues presta su voz para el personaje Birdperson.</p>
+            </div>
+            <!--La información de la biografía de Dan Harmon salió de: https://www.sensacine.com.mx/actores/actor-132181/biografia/-->
+        </section>
+
+        <section id="section3" class="seccion">
+            <h2>Sinopsis</h2>
+            <img src="imagenes/Rick y Morty (sinopsis).jpg" width="1000px" height="500px" alt="Rick y Morty (Sinopsis)"/><!--Imagen sacada de:https://elcanonazo.com/rick-y-morty-un-perfecto-multiverso-transmedia/-->
+            <p>Rick Sánchez es lo que uno se imagina al leer o escuchar el término “científico loco”. Si bien, es un genio, también tiene un peculiar gusto por el alcohol, es irresponsable y está loco. Recién se mudó con su hija Beth a la casa de ésta, y se reúne con Morty, su nieto. Muy a su estilo, y para evitar que Morty se convierta en un idiota como su padre, Rick se dedica a enseñarle todo tipo de aventuras en aras de potenciar su inteligencia. En su camino se encontrarán con aventuras intergalácticas, viajes a diferentes dimensiones, y realidades paralelas que los alejarán de lo que se conoce como una “vida normal”.</p><!--La info fue tomada de: https://cinepremiere.com.mx/rick-y-morty-serie-de-que-trata-reparto-donde-ver.html-->
+        </section>
+        <a href="#inicio"><button>Volver al inicio</button></a><!--Acá está el botón para regresar al inicio desde la parte final-->
+        <button id="btn-arriba"><img src="PNG/flecha1.png" class="menusinmargen2"></button>
+        <button id="btn-abajo"><img src="PNG/flecha2.png" class="menusinmargen2"></button>
+    </div>
+    <div class="gif-container"> <!--El gif es de Jerry cayendo, lo puse en la esquina para que al bajar la barra pareciera que va en caída-->
+        <img id="gif" src="Gif/JerrySaltando.gif" alt="Jerry Saltando" class="gif-activo"> <!--Ahora con JavaScript se puede hacer que Jerry pase de saltar a caerse al hacer scroll-->
+    </div> 
+    <footer>
+        <p>&copy; 2024 Sneider Velásquez.</p> <!-- Pie de página -->
+    </footer>
+    
+    <script src="javascript.js"></script>
+</body>
+</html>

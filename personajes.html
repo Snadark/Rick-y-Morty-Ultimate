@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es"> <!--Para definir el idioma español-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Personajes - Rick & Morty</title> <!--Nombre que aparece en la pestaña-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header> <!--Encabezado de la página: Se repite en cada una de las pestañas-->
+            <input type="checkbox" id="boton-menu">
+            <label for="boton-menu"><img src="PNG/Menucerrado.png" class="menusinmargen"><a href="index.html"> <!--Antes habia un título con el link del index, decidi cambiarlo por una imagen png-->
+                <img src="PNG/Logo de rick y morty.png" width="400px" height="auto" alt="logo de Rick y Morty" class="logosinmargen" >
+                </a></label>
+                <nav class="menunav"><ul class="menuul">
+                    <li><a href="introduccion.html"target="_self"><button class="boton">Introduccion</button></a></li>
+                    <li><a href="ubicacion.html"target="_self"><button class="boton">Ubicacion</button></a></li>
+                    <li><a href="personajes.html"target="_self"><button class="boton">Personajes</button></a></li>
+                    <li><a href="actividades.html"target="_self"><button class="boton">Actividades</button></a></li>
+                    <li><a href="historia.html"target="_self"><button class="boton">Historia</button></a></li>
+                    <li><a href="mapa-interactivo.html" target="_self"><button class="boton">Mapa Interactivo</button></a></li>
+                    <li><a href="creditos.html"target="_self"><button class="boton">Creditos</button></a></li>
+                    <!--En los botones quité las tildes para evitar interferencias con el código, según lo explicado en la clase-->
+                </ul></nav>
+            <a href="index.html"> <!--Antes habia un título con el link del index, decidi cambiarlo por una imagen png-->
+            <img src="PNG/Logo de rick y morty.png" width="400px" height="auto" alt="logo de Rick y Morty" class="logosinmargenocultar" >
+            </a>
+    </header>
+    <div class="siguientealheader">
+        <h1 class="titulo-distinto">Personajes</h1>
+        <section>
+            <table><!-- Decidí colocar los personajes en una tabla -->
+                <tr>
+                    <th>Personaje </th> <!--La imagen de cada personaje-->
+                    <th>Nombre </th> <!--Acá ira su nombre-->
+                    <th>Aparición</th> <!--La temporada desde la que aparece-->
+                    <th>Descripción </th> <!--Una breve descripción del personaje-->
+                    <th>Versiones relevantes</th> <!--En la serie hay varias versiones de cada personaje, acá de resaltan las más importantes-->
+                </tr>
+                <!--Las imagenes tienen la class "imagen" para hacer que tengan el mismo tamaño y mantengan la resolución, usando CSS-->
+                <tr>
+                    <td><img src="Imagenes/Rick Sanchez.jpg" width="100px" height="100px" alt="Rick Sánchez" class="imagen"/></td>
+                    <td> Rick Sánchez</td>
+                    <td> Todas </td>
+                    <td>Sánchez es un científico alcohólico misántropo conocido por su comportamiento temerario, nihilista y su personalidad pesimista, el personaje ha sido bien recibido. Es un científico loco sociopático que parece conocer todo en el universo y por lo tanto encuentra la vida una experiencia traumática y sin sentido. Sin embargo, a pesar de asumir que es la persona más inteligente del universo, ha habido momentos en los que se ha equivocado.</td>
+                    <!--https://es.wikipedia.org/wiki/Rick_S%C3%A1nchez_(Rick_y_Morty)-->
+                    <td><ul><!-- Acá puse una tabla con lista ordenada-->
+                        <li>El Consejo Transdimensional de Ricks</li> 
+                        <li>Rick Prime</li></ul></td>
+                </tr>
+                <tr>
+                    <td><img src="Imagenes/Morty Smith.jpg" width="100px" height="100px" alt="Morty Smith" class="imagen"/></td><!--Sacada de: https://www.colectivaxbox.com/2022/07/lebron-james-rick-sanchez-y-morty-smith.html-->
+                    <td>Morty Smith</td>
+                    <td>Todas</td>
+                    <td>Morty tiene 14 años y es un estudiante del instituto Harry Herpson, junto con su hermana mayor, Summer. Morty parece sufrir ansiedad y se estresa fácilmente, en gran parte a raíz de experiencias traumáticas durante sus aventuras con Rick. Es a menudo desestimado como idiota por Rick y otros, e incluso se duda de que tenga algún tipo de discapacidad, pero se le ve más sensato que su abuelo, ya que comprende los sentimientos humanos y es más comprensivo. Es capaz de explotar de rabia y dar lecciones morales en objeción a la actitud y las acciones de Rick.</td>    
+                    <!--Sacado de: https://es.wikipedia.org/wiki/Morty_Smith-->
+                    <td><ul><!-- Acá puse una tabla con lista ordenada-->
+                        <li>Morty malvado</li></ul></td>
+                </tr>
+                <tr>
+                    <td><img src="Imagenes/Summer Smith.jpg" width="100px" height="100px" alt="Summer Smith" class="imagen"/></td><!-- Sacada de: https://ultimatepopculture.fandom.com/wiki/Summer_Smith-->
+                    <td>Summer Smith</td>
+                    <td>Desde el capitulo 7 de la primer temporada</td>
+                    <td>Summer tiene 17 años y estudia en la escuela secundaria Harry Herpson junto con su hermano menor Morty. De vez en cuando expresa celos de que Morty acompañe a Rick en sus aventuras interdimensionales, a quien ella ve como un héroe, aunque él a menudo se muestra despectivo y desdeñoso con la perspectiva y los valores de su vida adolescente. A medida que avanza la serie, Summer comienza a acompañar a Rick y Morty en sus aventuras y se le confía la tarea de restaurar sus recuerdos en el escenario en el que la pareja queda amnésica .</td><!--https://ultimatepopculture.fandom.com/wiki/Summer_Smith-->
+                    <td><ul><!-- Acá puse una tabla con lista ordenada-->
+                        <li>Summer Prime: Dimension cronenberg</li></ul></td>
+                </tr>
+                <tr>
+                    <td><img src="Imagenes/Beth Smith.jpg" width="100px" height="100px" alt="Beth Smith" class="imagen"/></td><!--https://aminoapps.com/c/rick-and-morty-es/page/item/biografia-de-beth-smith-sanchez/3202_XQtDIgEZv8G3BkvoKGWK88wwzgXpd-->
+                    <td>Beth Smith</td>
+                    <td>Desde el capitulo 7 de la primer temporada</td>
+                    <td>Beth es una veterinaria que se especializa en cirugía de caballos, que se ve afectada por una profunda sensación de insatisfacción con su vida, derivada de su creencia de que se ha «estancado» en su matrimonio, familia y trabajo, llevándola a aceptar a su padre en su hogar después de que él la abandonó cuando era adolescente. Conocida por su personalidad egoísta y humorística, alcoholismo y abrasividad cuando es criticada, el personaje ha sido bien recibido. Es la hija sensata y asertiva del científico loco Rick Sánchez, madre de Morty y Summer Smith, esposa de Jerry Smith y abuela de Naruto y Morty Smith Jr</td>
+                    <!--Sacada de: https://es.wikipedia.org/wiki/Beth_Smith-->
+                    <td><ul><!-- Acá puse una tabla con lista ordenada-->
+                        <li>Beth Prime: Dimension cronenberg</li>
+                        <li>Beth espacial</li></ul></td>
+                </tr>
+                <tr>
+                    <td><img src="Imagenes/Jerry Smith.jpg" width="100px" height="100px" alt="Jerry Smith" class="imagen"/></td><!-- De: https://www.esquire.com/es/actualidad/tv/a36810219/rick-y-morty-temporada-5-jerry-queer-lgbti/-->
+                    <td>Jerry Smith</td>
+                    <td>Desde el capitulo 2 de la segunda temporada</td>
+                    <td>Jerry es retratado como un perdedor mediocre y desempleado que encuentra contenido en su vida simple. Utiliza la lástima como su «movimiento característico», lo que lleva a que la gente lo contrate o le dé algún tipo de consuelo. Jerry es famoso por su rivalidad mutua con Rick Sánchez, su suegro. En muchas ocasiones en las primeras temporadas, se ha demostrado que su relación con su pareja, Beth Smith, es increíblemente poco saludable, codependiente e incompatible. Uno de los pasatiempos de Jerry es la apicultura, que aprende en algún momento durante la cuarta temporada.</td>
+                    <!--De: https://es.wikipedia.org/wiki/Jerry_Smith_(Rick_y_Morty)-->
+                    <td><ul><!-- Acá puse una tabla con lista ordenada-->
+                        <li>Jerry Prime: Dimension cronenberg</li>
+                        <li>Jerry de la segunda temporada</li></ul></td>
+                </tr>
+            </table> <!--Incluí el "/table" para cerrar la tabla, como recomiendan en la retroalimentación-->
+        </section>
+    </div>    
+    <div class="gif-container"> <!--El gif es de Jerry cayendo, lo puse en la esquina para que al bajar la barra pareciera que va en caída-->
+        <img id="gif" src="Gif/JerrySaltando.gif" alt="Jerry Saltando" class="gif-activo"> <!--Ahora con JavaScript se puede hacer que Jerry pase de saltar a caerse al hacer scroll-->
+    </div> 
+    <footer>
+        <p>&copy; 2024 Sneider Velásquez.</p>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+</html>
