@@ -620,4 +620,7 @@ header{
     .info-personajes{
       column-count: 1; /*Para mostrar solo una columna*/
     } 
+    .gif-introduccion{
+      display:none /*Para evitar que interrumpa el uso de los botones en celulares*/
+    }
 }
